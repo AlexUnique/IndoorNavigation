@@ -19,7 +19,6 @@ extern NSString * const INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons;
 + (instancetype)sharedManager;
 
 - (void)startDiscovering;
-
 - (NSArray *)beaconsWithProximity:(CLProximity)proximity;
 
 @end

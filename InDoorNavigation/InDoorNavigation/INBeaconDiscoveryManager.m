@@ -168,7 +168,7 @@ NSString * const INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons = @"INBeacon
   dispatch_async(dispatch_get_main_queue(), ^{
     [[NSNotificationCenter defaultCenter] postNotificationName:INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons
                                                         object:self];
-    
+    NSLog(@"Nearest beacon: %@", self.nearestBeacon.locationBeacon);
   });
 }
 
