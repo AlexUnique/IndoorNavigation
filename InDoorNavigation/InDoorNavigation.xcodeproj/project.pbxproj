@@ -26,6 +26,7 @@
 		E9A253131BF7CDA200AC3428 /* INShoppingListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A253121BF7CDA200AC3428 /* INShoppingListItem.m */; };
 		FA3EC5341BF7BB450069691B /* INBeaconDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5311BF7BB450069691B /* INBeaconDefaults.m */; };
 		FA3EC5351BF7BB450069691B /* INBeaconDiscoveryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5331BF7BB450069691B /* INBeaconDiscoveryManager.m */; };
+		FAFAB6A21BF7CC7A00521195 /* Catalogues.json in Resources */ = {isa = PBXBuildFile; fileRef = FAFAB6A11BF7CC7A00521195 /* Catalogues.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		FA3EC5311BF7BB450069691B /* INBeaconDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBeaconDefaults.m; sourceTree = "<group>"; };
 		FA3EC5321BF7BB450069691B /* INBeaconDiscoveryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBeaconDiscoveryManager.h; sourceTree = "<group>"; };
 		FA3EC5331BF7BB450069691B /* INBeaconDiscoveryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBeaconDiscoveryManager.m; sourceTree = "<group>"; };
+		FAFAB6A11BF7CC7A00521195 /* Catalogues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Catalogues.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		E90FF9A31BF7B72C00A42928 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FAFAB6A11BF7CC7A00521195 /* Catalogues.json */,
 				E90FF9A11BF7B72900A42928 /* Voodka.png */,
 			);
 			name = Assets;
@@ -310,6 +313,7 @@
 			files = (
 				E90FF9701BF779CE00A42928 /* LaunchScreen.storyboard in Resources */,
 				E90FF9A21BF7B72900A42928 /* Voodka.png in Resources */,
+				FAFAB6A21BF7CC7A00521195 /* Catalogues.json in Resources */,
 				E90FF96D1BF779CE00A42928 /* Assets.xcassets in Resources */,
 				E90FF96B1BF779CE00A42928 /* Main.storyboard in Resources */,
 			);

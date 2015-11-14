@@ -14,6 +14,7 @@
 
 #import "INCatalogueController.h"
 #import "INCatalogueRepository.h"
+#import "INBeaconDiscoveryManager.h"
 
 @interface INCatalogueViewController ()
 
@@ -23,6 +24,7 @@
 
 @property (nonatomic, strong) INCatalogueController *catalogueController;
 @property (nonatomic, strong) INCatalogueRepository *repository;
+@property (nonatomic, strong) INBeacon *currentBeacon;
 
 - (INCategory *)categoryAtIndex:(NSInteger)index;
 - (INProduct *)productAtIndexPath:(NSIndexPath *)indexPath;
@@ -30,6 +32,11 @@
 @end
 
 @implementation INCatalogueViewController
+
+///--------------------------------------------------
+/// View Lifecycle
+///--------------------------------------------------
+#pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,6 +49,20 @@
     self.catalogueController.delegate = self;
     self.catalogueController.dataSource = self.repository;
     [self.catalogueController discoverBeacon:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  
+  [self _subscribeForBeaconDiscoveryManagerNotifications];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+  [super viewWillDisappear:animated];
+  
+  [self _unsubscribeFromBeaconDiscoveryManagerNotifications];
 }
 
 - (void)setCatalogue:(INCatalogue *)catalogue {
@@ -78,6 +99,35 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [self categoryAtIndex:section].title;
+}
+
+///--------------------------------------------------
+/// INBeaconDiscoveryManager Notifications
+///--------------------------------------------------
+#pragma mark - INBeaconDiscoveryManager Notifications
+
+- (void)_subscribeForBeaconDiscoveryManagerNotifications
+{
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(_beaconDiscoveryManagerDidUpdateBeacons)
+                                               name:INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons
+                                             object:nil];
+}
+
+- (void)_unsubscribeFromBeaconDiscoveryManagerNotifications
+{
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons object:nil];
+}
+
+- (void)_beaconDiscoveryManagerDidUpdateBeacons
+{
+  INBeacon *nearestBeacon = [INBeaconDiscoveryManager sharedManager].nearestBeacon;
+  
+  if (![self.currentBeacon isEqual:nearestBeacon])
+  {
+    self.currentBeacon = nearestBeacon;
+    [self.catalogueController discoverBeacon:self.currentBeacon];
+  }
 }
 
 @end

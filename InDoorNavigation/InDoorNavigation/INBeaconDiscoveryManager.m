@@ -17,6 +17,7 @@ NSString * const INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons = @"INBeacon
 @property (nonatomic, strong) NSMutableDictionary *beaconsIndexByProximity;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSMutableDictionary *rangedRegions;
+@property (nonatomic, strong) NSTimer *timer;
 @end
 
 @implementation INBeaconDiscoveryManager
@@ -95,6 +96,17 @@ NSString * const INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons = @"INBeacon
   return self.beaconsIndexByProximity.allValues;
 }
 
+- (INBeacon *)nearestBeacon
+{
+  NSPredicate *knownProximityPredicate = [NSPredicate predicateWithFormat:@"locationBeacon.proximity != %d", CLProximityUnknown];
+  NSArray *beaconsInKnownProximity = [self.beaconsIndexByUUID.allValues filteredArrayUsingPredicate:knownProximityPredicate];
+  
+  NSSortDescriptor *accuracySortDescription = [NSSortDescriptor sortDescriptorWithKey:@"locationBeacon.accuracy" ascending:YES];
+  NSArray *sortedBeacons = [beaconsInKnownProximity sortedArrayUsingDescriptors:@[accuracySortDescription]];
+
+  return sortedBeacons.firstObject;
+}
+
 
 ///--------------------------------------------------
 /// Discovery Management
@@ -108,20 +120,56 @@ NSString * const INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons = @"INBeacon
 
 - (void)_locationManagerDidChangeAuthorizationStatusToWhenInUse
 {
-  // Start ranging when the view appears.
   for (CLBeaconRegion *region in self.rangedRegions)
   {
     [self.locationManager startRangingBeaconsInRegion:region];
   }
+  
+  [self _startBeaconsUpdateNotificationTimer];
 }
 
 - (void)stopDiscovering
 {
-  // Stop ranging when the view goes away.
+  [self _stopBeaconsUpdateNotificationTimer];
+  
   for (CLBeaconRegion *region in self.rangedRegions)
   {
     [self.locationManager stopRangingBeaconsInRegion:region];
   }
+}
+
+
+///--------------------------------------------------
+/// Notifications Management
+///--------------------------------------------------
+#pragma mark - Notifications Management
+
+- (void)_startBeaconsUpdateNotificationTimer
+{
+  self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(_timerDidFire) userInfo:nil repeats:YES];
+}
+
+- (void)_stopBeaconsUpdateNotificationTimer
+{
+  if (self.timer.isValid)
+  {
+    [self.timer invalidate];
+    self.timer = nil;
+  }
+}
+
+- (void)_timerDidFire
+{
+  [self _postBeaconsDidUpdateNotification];
+}
+
+- (void)_postBeaconsDidUpdateNotification
+{
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [[NSNotificationCenter defaultCenter] postNotificationName:INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons
+                                                        object:self];
+    NSLog(@"Nearest beacon: %@", self.nearestBeacon.locationBeacon);
+  });
 }
 
 
@@ -170,6 +218,8 @@ NSString * const INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons = @"INBeacon
 
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
+  NSAssert([NSThread currentThread].isMainThread, @"Not a main thread");
+  
   /*
    CoreLocation will call this delegate method at 1 Hz with updated range information.
    Beacons will be categorized and displayed by proximity.  A beacon can belong to multiple
@@ -210,12 +260,6 @@ NSString * const INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons = @"INBeacon
       self.beaconsIndexByProximity[range] = proximityBeacons;
     }
   }
-  
-  dispatch_async(dispatch_get_main_queue(), ^{
-    [[NSNotificationCenter defaultCenter] postNotificationName:INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons
-                                                        object:self];
-
-  });
 }
 
 @end

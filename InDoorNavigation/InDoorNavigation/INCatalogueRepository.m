@@ -10,65 +10,82 @@
 #import "INCatalogue.h"
 #import "INCategory.h"
 #import "INProduct.h"
+#import "INBeacon.h"
+
+@interface INCatalogueRepository ()
+@property (nonatomic, strong) NSDictionary *cataloguesIndexedByUUID;
+@end
 
 @implementation INCatalogueRepository
 
-- (INCatalogue *)catalogueForBeacon:(INBeacon *)beacon {
-    return [self catalogue0];
+- (NSDictionary *)cataloguesIndexedByUUID
+{
+  if (_cataloguesIndexedByUUID == nil)
+  {
+    NSArray *catalogues = [self _parseCatalogues];
+    _cataloguesIndexedByUUID = [NSDictionary dictionaryWithObjects:catalogues
+                                                           forKeys:[catalogues valueForKey:@"UUID"]];
+  }
+  
+  return _cataloguesIndexedByUUID;
 }
 
-- (INCatalogue *)catalogue0 {
+- (INCatalogue *)catalogueForBeacon:(INBeacon *)beacon
+{
+  return self.cataloguesIndexedByUUID[beacon.UUID];
+}
+
+- (NSArray *)_parseCatalogues
+{
+  NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Catalogues" ofType:@"json"];
+  
+  NSData *jsonData = [[NSData alloc] initWithContentsOfFile:filePath];
+  NSArray *rawCatalogues = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
+  NSMutableArray *catalogues = [NSMutableArray new];
+  
+  for (NSDictionary *rawCatalogue in rawCatalogues)
+  {
     INCatalogue *catalogue = [INCatalogue new];
-    NSArray *cats = @[@[@"Sweets", @[@[@"Hersheys", @"5.00", @""],
-                        @[@"Snikers", @"6.00", @""],
-                        @[@"Mars", @"7.00", @""],
-                        @[@"Bounty", @"8.00", @""]]],
-                      @[@"Cheese", @[@[@"Old", @"4.00", @"-2.00"],
-                        @[@"Mild", @"6.00", @"-5.00"],
-                        @[@"Mozzarella", @"3.00", @"-2.00"],
-                        @[@"Medium", @"6.00", @""],
-                        @[@"Garlic", @"5.00", @"-4.00"],
-                        @[@"Part Skim", @"9.00", @"-2.00"],
-                        @[@"Marble", @"1.00", @""]]],
-                      @[@"Bread", @[@[@"Garlic", @"7.00", @""],
-                        @[@"White", @"6.00", @""],
-                        @[@"Rye", @"5.00", @""],
-                        @[@"Baguette", @"8.00", @"-2.50"],
-                        @[@"Ciabatta", @"6.00", @"-2.00"]]]];
-    
-    NSMutableArray *catsMade = [NSMutableArray new];
-    for (NSArray *arr in cats) {
-        [catsMade addObject:[self categoryFromArray:arr]];
-    }
-    for (INProduct *product in [catsMade[0] items]) {
-        product.highlighted = YES;
-    }
-    catalogue.categories = catsMade;
-    
-    return catalogue;
+    catalogue.UUID = [[NSUUID alloc] initWithUUIDString:rawCatalogue[@"id"]];
+    catalogue.title = rawCatalogue[@"title"];
+    catalogue.categories = [self _categoriesWithRawCategories:rawCatalogue[@"categories"]];
+    [catalogues addObject:catalogue];
+  }
+
+  return catalogues;
 }
 
-- (INCategory *)categoryFromArray:(NSArray *)array {
+- (NSArray *)_categoriesWithRawCategories:(NSArray *)rawCategories
+{
+  NSMutableArray *categories = [NSMutableArray new];
+  
+  for (NSDictionary *rawCategory in rawCategories)
+  {
     INCategory *category = [INCategory new];
-    
-    category.title = array[0];
-    NSMutableArray *products = [NSMutableArray new];
-    for (NSArray *arr in array[1]) {
-        [products addObject:[self productWithTitle:arr[0] price:arr[1] dscount:arr[2]]];
-    }
-    category.items = products;
-    
-    return category;
+    category.title = rawCategory[@"title"];
+    category.items = [self _productsWithRawProducts:rawCategory[@"products"]];
+    [categories addObject:category];
+  }
+  
+  return categories;
 }
 
-- (INProduct *)productWithTitle:(NSString *)title price:(NSString *)priceString dscount:(NSString *)discountString {
+- (NSArray *)_productsWithRawProducts:(NSArray *)rawProducts
+{
+  NSMutableArray *products = [NSMutableArray new];
+  
+  for (NSDictionary *rawProduct in rawProducts)
+  {
     INProduct *product = [INProduct new];
-    
-    product.title = title;
-    product.price = [NSDecimalNumber decimalNumberWithString:priceString];
-    product.discount = [NSDecimalNumber decimalNumberWithString:discountString];
-    
-    return product;
+    product.title = rawProduct[@"title"];
+    product.price = [NSDecimalNumber decimalNumberWithString:rawProduct[@"price"]];
+    product.discount = [NSDecimalNumber decimalNumberWithString:rawProduct[@"discount"]];
+    product.imageURL = rawProduct[@"imageURL"];
+    product.highlighted = [rawProduct[@"highlighted"] boolValue];
+    [products addObject:product];
+  }
+  
+  return products;
 }
 
 @end
