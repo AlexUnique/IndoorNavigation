@@ -40,7 +40,7 @@
 	},
 
      {
- "id": "11156DB5-DFFB-48D2-B060-D0F5A71096E0",
+ "id": "222BCFCE-174E-4BAC-A814-092E77F6B7E5",
  "title": "Isle 1",
  "categories": [
                 {
@@ -80,7 +80,7 @@
 	},
  
 	{
-		"id": "222BCFCE-174E-4BAC-A814-092E77F6B7E5",
+		"id": "444E7901-873F-4F9C-88E5-ECD5F350434E",
 		"title": "Isle 2",
 		"categories": [
 			{
@@ -91,8 +91,8 @@
 					{"title": "Starbugs", "price": "3.00", "discount": "-2.00", "highlighted": true},
 					{"title": "Timmys", "price": "6.00", "discount": "0.00", "highlighted": true},
 					{"title": "Tea", "price": "5.00", "discount": "-4.00", "highlighted": true},
-					{"title": "Mocha", "price": "9.00", "discount": "-2.00"},
-					{"title": "French Vanilla", "price": "1.00", "discount": "0.00"},
+					{"title": "Mocha", "price": "9.00", "discount": "-2.00", "highlighted": true},
+					{"title": "French Vanilla", "price": "1.00", "discount": "0.00", "highlighted": true},
 				]
 			}
 		]
