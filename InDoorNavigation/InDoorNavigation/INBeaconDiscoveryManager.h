@@ -14,6 +14,7 @@ extern NSString * const INBeaconDiscoveryManagerDidUpdateDiscoveredBeacons;
 @interface INBeaconDiscoveryManager : NSObject
 
 @property (nonatomic, readonly) NSArray *discoveredBeacons;
+@property (nonatomic, readonly) INBeacon *nearestBeacon;
 
 + (instancetype)sharedManager;
 
