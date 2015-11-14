@@ -11,12 +11,15 @@
 
 @implementation INCatalogueTableViewCell
 
-- (void)setProduct:(INProduct *)product {
-    self.titleLabel.text = product.title;
-    self.priceLabel.text = product.price.stringValue;
-    self.discountLabel.text = product.discount.stringValue;
-    self.discountLabel.hidden = [product.discount isEqual:[NSDecimalNumber notANumber]];
-    self.highlightingIndicator.hidden = !product.highlighted;
+- (void)setProduct:(INProduct *)product
+{
+  self.titleLabel.text = product.title;
+  self.priceLabel.text = product.price.stringValue;
+  self.priceLabel.hidden = YES;
+  self.discountLabel.text = product.discount.stringValue;
+  self.discountLabel.hidden = YES;
+//  self.discountLabel.hidden = [product.discount isEqual:[NSDecimalNumber zero]];
+  self.highlightingIndicator.hidden = !product.highlighted;
 }
 
 @end

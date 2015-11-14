@@ -20,6 +20,7 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
+@property (nonatomic, strong) INCatalogue *catalogue;
 @property (nonatomic, copy) NSArray<INCategory *> *categories;
 
 @property (nonatomic, strong) INCatalogueController *catalogueController;
@@ -65,12 +66,16 @@
   [self _unsubscribeFromBeaconDiscoveryManagerNotifications];
 }
 
-- (void)setCatalogue:(INCatalogue *)catalogue {
-    self.categories = catalogue.categories;
-    [self.tableView reloadData];
+- (void)setCatalogue:(INCatalogue *)catalogue
+{
+  _catalogue = catalogue;
+  self.title = catalogue.title;
+  self.categories = catalogue.categories;
+  [self.tableView reloadData];
 }
 
-- (INCategory *)categoryAtIndex:(NSInteger)index {
+- (INCategory *)categoryAtIndex:(NSInteger)index
+{
     return self.categories[index];
 }
 
