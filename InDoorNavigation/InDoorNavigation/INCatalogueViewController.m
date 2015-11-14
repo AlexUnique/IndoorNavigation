@@ -7,8 +7,16 @@
 //
 
 #import "INCatalogueViewController.h"
+#import "INCatalogueTableViewCell.h"
+#import "INProduct.h"
+#import "INCategory.h"
 
 @interface INCatalogueViewController ()
+
+@property (nonatomic, copy) NSArray<INCategory *> *categories;
+
+- (INCategory *)categoryAtIndex:(NSInteger)index;
+- (INProduct *)productAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
@@ -19,17 +27,31 @@
     
 }
 
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (INCategory *)categoryAtIndex:(NSInteger)index {
+    return self.categories[index];
 }
-*/
+
+- (INProduct *)productAtIndexPath:(NSIndexPath *)indexPath {
+    return [self categoryAtIndex:indexPath.section].items[indexPath.row];
+}
+
+#pragma mark - TableView Datasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [[self categoryAtIndex:section].items count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    INCatalogueTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([INCatalogueTableViewCell class])
+                                                                     forIndexPath:indexPath];
+    
+    [cell setProduct:[self productAtIndexPath:indexPath]];
+    
+    return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [self categoryAtIndex:section].title;
+}
 
 @end

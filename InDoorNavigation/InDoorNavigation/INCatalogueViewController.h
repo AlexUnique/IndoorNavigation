@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface INCatalogueViewController : UIViewController
+@interface INCatalogueViewController : UIViewController <UITableViewDataSource>
+
+
 
 @end
