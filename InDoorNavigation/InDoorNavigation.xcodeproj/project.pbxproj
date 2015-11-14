@@ -41,7 +41,7 @@
 		E90FF9781BF77D3F00A42928 /* INCatalogueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueViewController.h; sourceTree = "<group>"; };
 		E90FF9791BF77D3F00A42928 /* INCatalogueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogueViewController.m; sourceTree = "<group>"; };
 		E90FF97C1BF7800900A42928 /* INCatalogueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueTableViewCell.h; sourceTree = "<group>"; };
-		E90FF97D1BF7800900A42928 /* INCatalogueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogueTableViewCell.m; sourceTree = "<group>"; };
+		E90FF97D1BF7800900A42928 /* INCatalogueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = INCatalogueTableViewCell.m; sourceTree = "<group>"; tabWidth = 2; };
 		E90FF9811BF7821400A42928 /* INCatalogue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogue.h; sourceTree = "<group>"; };
 		E90FF9821BF7821400A42928 /* INCatalogue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogue.m; sourceTree = "<group>"; };
 		E90FF9841BF7826300A42928 /* INProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INProduct.h; sourceTree = "<group>"; };
@@ -87,7 +87,9 @@
 				E90FF95F1BF779CE00A42928 /* InDoorNavigation */,
 				E90FF95E1BF779CE00A42928 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		E90FF95E1BF779CE00A42928 /* Products */ = {
 			isa = PBXGroup;
