@@ -73,6 +73,40 @@
   self.title = catalogue.title;
   self.categories = catalogue.categories;
   [self.tableView reloadData];
+  
+  [self _catalogueDidChange];
+}
+
+- (void)_catalogueDidChange
+{
+  if (self.catalogue == nil)
+  {
+    return;
+  }
+  
+  NSMutableString *categoriesString = [NSMutableString new];
+  
+  for (INCategory *category in self.catalogue.categories)
+  {
+    if (categoriesString.length > 0)
+    {
+      [categoriesString appendString:@"\n"];
+    }
+    
+    [categoriesString appendString:category.title];
+  }
+  
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:self.catalogue.title
+                                                                           message:categoriesString
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+  
+  UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    
+  }];
+  
+  [alertController addAction:OKAction];
+  
+  [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (INCategory *)categoryAtIndex:(NSInteger)index
