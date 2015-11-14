@@ -40,16 +40,16 @@
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 40.0;
-    
-    self.repository = [INCatalogueRepository new];
-    self.catalogueController = [INCatalogueController new];
-    self.catalogueController.delegate = self;
-    self.catalogueController.dataSource = self.repository;
-    [self.catalogueController discoverBeacon:nil];
+  [super viewDidLoad];
+  
+  self.tableView.rowHeight = UITableViewAutomaticDimension;
+  self.tableView.estimatedRowHeight = 40.0;
+  
+  self.repository = [INCatalogueRepository new];
+  self.catalogueController = [INCatalogueController new];
+  self.catalogueController.delegate = self;
+  self.catalogueController.dataSource = self.repository;
+  [self.catalogueController discoverBeacon:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -57,6 +57,7 @@
   [super viewWillAppear:animated];
   
   [self _subscribeForBeaconDiscoveryManagerNotifications];
+  [self _beaconDiscoveryManagerDidUpdateBeacons];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -76,34 +77,34 @@
 
 - (INCategory *)categoryAtIndex:(NSInteger)index
 {
-    return self.categories[index];
+  return self.categories[index];
 }
 
 - (INProduct *)productAtIndexPath:(NSIndexPath *)indexPath {
-    return [self categoryAtIndex:indexPath.section].items[indexPath.row];
+  return [self categoryAtIndex:indexPath.section].items[indexPath.row];
 }
 
 #pragma mark - TableView Datasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[self categoryAtIndex:section].items count];
+  return [[self categoryAtIndex:section].items count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.categories.count;
+  return self.categories.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    INCatalogueTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([INCatalogueTableViewCell class])
-                                                                     forIndexPath:indexPath];
-    
-    [cell setProduct:[self productAtIndexPath:indexPath]];
-    
-    return cell;
+  INCatalogueTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([INCatalogueTableViewCell class])
+                                                                   forIndexPath:indexPath];
+  
+  [cell setProduct:[self productAtIndexPath:indexPath]];
+  
+  return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [self categoryAtIndex:section].title;
+  return [self categoryAtIndex:section].title;
 }
 
 ///--------------------------------------------------

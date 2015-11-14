@@ -12,29 +12,34 @@
 @implementation INShoppingListTableViewCell
 
 - (void)doneAction:(id)sender {
-    self.onDidTapDone();
+  self.onDidTapDone();
 }
 
 - (void)setItem:(INShoppingListItem *)item {
-    self.titleLabel.text = item.title;
-    self.doneButton.hidden = item.done;
-    switch (item.status) {
-        case INShoppingListItemStatusNotAvailable:
-            self.titleLabel.text = @"Not Available";
-            break;
-            
-        case INShoppingListItemStatusAvailable:
-            self.titleLabel.text = @"Available";
-            break;
-            
-        case INShoppingListItemStatusInIsle:
-            self.titleLabel.text = @"In nearest isle";
-            break;
-            
-        case INShoppingListItemStatusNear:
-            self.titleLabel.text = @"Right near you";
-            break;
-    }
+  self.titleLabel.text = item.title;
+  self.doneButton.hidden = item.done;
+  switch (item.status) {
+    case INShoppingListItemStatusNotAvailable:
+      self.titleLabel.text = @"Not Available";
+      self.titleLabel.textColor = [UIColor redColor];
+      break;
+      
+    case INShoppingListItemStatusAvailable:
+      self.titleLabel.text = @"Available";
+      self.titleLabel.textColor = [UIColor darkTextColor];
+      break;
+      
+    case INShoppingListItemStatusInIsle:
+      self.titleLabel.text = @"In nearest isle";
+      self.titleLabel.textColor = [UIColor yellowColor];
+      
+      break;
+      
+    case INShoppingListItemStatusNear:
+      self.titleLabel.text = @"Right near you";
+      self.titleLabel.textColor = [UIColor greenColor];
+      break;
+  }
 }
 
 @end
