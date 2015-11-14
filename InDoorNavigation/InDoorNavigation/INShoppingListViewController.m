@@ -80,7 +80,12 @@
   INShoppingListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([INShoppingListTableViewCell class])
                                                                       forIndexPath:indexPath];
   
-  [cell setItem:self.items[indexPath.row]];
+  INShoppingListItem *item = self.items[indexPath.row];
+  [cell setItem:item];
+  __weak typeof(self) weakSelf = self;
+  [cell setOnDidTapDone:^{
+    [weakSelf.shoppingListController completeItem:item];
+  }];
   
   return cell;
 }
