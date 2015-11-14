@@ -10,7 +10,8 @@
 
 @implementation INCatalogueController
 
-- (void)discoverBeacon:(INBeacon *)beacon {
+- (void)discoverBeacon:(INBeacon *)beacon
+{
     INCatalogue *catalogue = [self.dataSource catalogueForBeacon:beacon];
     [self.delegate setCatalogue:catalogue];
 }

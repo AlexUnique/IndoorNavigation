@@ -21,6 +21,8 @@
 		E90FF99B1BF7A5E600A42928 /* INBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF99A1BF7A5E600A42928 /* INBeacon.m */; };
 		E90FF9A01BF7A81500A42928 /* INCatalogueRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF99F1BF7A81500A42928 /* INCatalogueRepository.m */; };
 		E90FF9A21BF7B72900A42928 /* Voodka.png in Resources */ = {isa = PBXBuildFile; fileRef = E90FF9A11BF7B72900A42928 /* Voodka.png */; };
+		FA3EC5341BF7BB450069691B /* INBeaconDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5311BF7BB450069691B /* INBeaconDefaults.m */; };
+		FA3EC5351BF7BB450069691B /* INBeaconDiscoveryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5331BF7BB450069691B /* INBeaconDiscoveryManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,10 @@
 		E90FF99E1BF7A81500A42928 /* INCatalogueRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueRepository.h; sourceTree = "<group>"; };
 		E90FF99F1BF7A81500A42928 /* INCatalogueRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogueRepository.m; sourceTree = "<group>"; };
 		E90FF9A11BF7B72900A42928 /* Voodka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Voodka.png; sourceTree = "<group>"; };
+		FA3EC5301BF7BB450069691B /* INBeaconDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBeaconDefaults.h; sourceTree = "<group>"; };
+		FA3EC5311BF7BB450069691B /* INBeaconDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBeaconDefaults.m; sourceTree = "<group>"; };
+		FA3EC5321BF7BB450069691B /* INBeaconDiscoveryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBeaconDiscoveryManager.h; sourceTree = "<group>"; };
+		FA3EC5331BF7BB450069691B /* INBeaconDiscoveryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBeaconDiscoveryManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,10 @@
 			children = (
 				E90FF9991BF7A5E600A42928 /* INBeacon.h */,
 				E90FF99A1BF7A5E600A42928 /* INBeacon.m */,
+				FA3EC5301BF7BB450069691B /* INBeaconDefaults.h */,
+				FA3EC5311BF7BB450069691B /* INBeaconDefaults.m */,
+				FA3EC5321BF7BB450069691B /* INBeaconDiscoveryManager.h */,
+				FA3EC5331BF7BB450069691B /* INBeaconDiscoveryManager.m */,
 			);
 			name = Discovery;
 			sourceTree = "<group>";
@@ -264,6 +274,8 @@
 				E90FF99B1BF7A5E600A42928 /* INBeacon.m in Sources */,
 				E90FF9831BF7821400A42928 /* INCatalogue.m in Sources */,
 				E90FF9861BF7826300A42928 /* INProduct.m in Sources */,
+				FA3EC5351BF7BB450069691B /* INBeaconDiscoveryManager.m in Sources */,
+				FA3EC5341BF7BB450069691B /* INBeaconDefaults.m in Sources */,
 				E90FF9651BF779CE00A42928 /* AppDelegate.m in Sources */,
 				E90FF9621BF779CE00A42928 /* main.m in Sources */,
 				E90FF97A1BF77D3F00A42928 /* INCatalogueViewController.m in Sources */,
@@ -413,6 +425,7 @@
 				E90FF9761BF779CE00A42928 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

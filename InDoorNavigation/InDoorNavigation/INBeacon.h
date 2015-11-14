@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@import CoreLocation;
 
 @interface INBeacon : NSObject
+
+@property (nonatomic, readonly) NSUUID *UUID;
+@property (nonatomic, strong) CLBeacon *locationBeacon;
+
+- (instancetype)initWithCLBeacon:(CLBeacon *)locationBeacon;
 
 @end
