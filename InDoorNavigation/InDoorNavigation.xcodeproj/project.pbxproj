@@ -13,6 +13,9 @@
 		E90FF96D1BF779CE00A42928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90FF96C1BF779CE00A42928 /* Assets.xcassets */; };
 		E90FF9701BF779CE00A42928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90FF96E1BF779CE00A42928 /* LaunchScreen.storyboard */; };
 		E90FF97A1BF77D3F00A42928 /* INCatalogueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9791BF77D3F00A42928 /* INCatalogueViewController.m */; };
+		E90FF97E1BF7800900A42928 /* INCatalogueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF97D1BF7800900A42928 /* INCatalogueTableViewCell.m */; };
+		E90FF9831BF7821400A42928 /* INCatalogue.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9821BF7821400A42928 /* INCatalogue.m */; };
+		E90FF9861BF7826300A42928 /* INProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9851BF7826300A42928 /* INProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		E90FF9711BF779CE00A42928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E90FF9781BF77D3F00A42928 /* INCatalogueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueViewController.h; sourceTree = "<group>"; };
 		E90FF9791BF77D3F00A42928 /* INCatalogueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogueViewController.m; sourceTree = "<group>"; };
+		E90FF97C1BF7800900A42928 /* INCatalogueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueTableViewCell.h; sourceTree = "<group>"; };
+		E90FF97D1BF7800900A42928 /* INCatalogueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogueTableViewCell.m; sourceTree = "<group>"; };
+		E90FF9811BF7821400A42928 /* INCatalogue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogue.h; sourceTree = "<group>"; };
+		E90FF9821BF7821400A42928 /* INCatalogue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogue.m; sourceTree = "<group>"; };
+		E90FF9841BF7826300A42928 /* INProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INProduct.h; sourceTree = "<group>"; };
+		E90FF9851BF7826300A42928 /* INProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +90,40 @@
 		E90FF9771BF77D1B00A42928 /* Catalogue */ = {
 			isa = PBXGroup;
 			children = (
+				E90FF9801BF780F400A42928 /* Model */,
+				E90FF97F1BF780DC00A42928 /* View */,
+			);
+			name = Catalogue;
+			sourceTree = "<group>";
+		};
+		E90FF97B1BF77F7800A42928 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E90FF97C1BF7800900A42928 /* INCatalogueTableViewCell.h */,
+				E90FF97D1BF7800900A42928 /* INCatalogueTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		E90FF97F1BF780DC00A42928 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E90FF97B1BF77F7800A42928 /* Cell */,
 				E90FF9781BF77D3F00A42928 /* INCatalogueViewController.h */,
 				E90FF9791BF77D3F00A42928 /* INCatalogueViewController.m */,
 			);
-			name = Catalogue;
+			name = View;
+			sourceTree = "<group>";
+		};
+		E90FF9801BF780F400A42928 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E90FF9811BF7821400A42928 /* INCatalogue.h */,
+				E90FF9821BF7821400A42928 /* INCatalogue.m */,
+				E90FF9841BF7826300A42928 /* INProduct.h */,
+				E90FF9851BF7826300A42928 /* INProduct.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +197,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90FF97E1BF7800900A42928 /* INCatalogueTableViewCell.m in Sources */,
+				E90FF9831BF7821400A42928 /* INCatalogue.m in Sources */,
+				E90FF9861BF7826300A42928 /* INProduct.m in Sources */,
 				E90FF9651BF779CE00A42928 /* AppDelegate.m in Sources */,
 				E90FF9621BF779CE00A42928 /* main.m in Sources */,
 				E90FF97A1BF77D3F00A42928 /* INCatalogueViewController.m in Sources */,
