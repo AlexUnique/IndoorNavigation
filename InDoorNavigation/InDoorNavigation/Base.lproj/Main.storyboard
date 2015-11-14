@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-695" y="-537"/>
         </scene>
-        <!--Item 1-->
+        <!--Catalogue-->
         <scene sceneID="R9e-9o-SKt">
             <objects>
-                <viewController id="V1U-ab-zFv" customClass="INCatalogueViewController" sceneMemberID="viewController">
+                <viewController id="V1U-ab-zFv" userLabel="Catalogue" customClass="INCatalogueViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7TM-mZ-hII"/>
                         <viewControllerLayoutGuide type="bottom" id="nV6-y8-viO"/>
@@ -93,6 +93,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="V1U-ab-zFv" id="p69-mA-0xd"/>
+                                    <outlet property="delegate" destination="V1U-ab-zFv" id="kkI-mI-nfc"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -106,6 +110,9 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="tgF-Do-MRX"/>
                     <navigationItem key="navigationItem" id="6o9-Qg-3hJ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="UsH-92-UEH" id="Hbg-1g-Owo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jx4-tk-jER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

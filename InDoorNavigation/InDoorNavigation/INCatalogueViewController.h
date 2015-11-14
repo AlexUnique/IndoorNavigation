@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class INCatalogue;
+
 @interface INCatalogueViewController : UIViewController <UITableViewDataSource>
 
-
+- (void)setCatalogue:(INCatalogue *)catalogue;
 
 @end

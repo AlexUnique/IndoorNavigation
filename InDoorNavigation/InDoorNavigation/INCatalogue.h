@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class INCategory;
+
 @interface INCatalogue : NSObject
+
+@property (nonatomic, copy) NSArray<INCategory *> *categories;
 
 @end

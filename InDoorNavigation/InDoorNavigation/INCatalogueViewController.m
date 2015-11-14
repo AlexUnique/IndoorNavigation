@@ -10,8 +10,11 @@
 #import "INCatalogueTableViewCell.h"
 #import "INProduct.h"
 #import "INCategory.h"
+#import "INCatalogue.h"
 
 @interface INCatalogueViewController ()
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @property (nonatomic, copy) NSArray<INCategory *> *categories;
 
@@ -25,6 +28,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+- (void)setCatalogue:(INCatalogue *)catalogue {
+    self.categories = catalogue.categories;
+    [self.tableView reloadData];
 }
 
 - (INCategory *)categoryAtIndex:(NSInteger)index {
