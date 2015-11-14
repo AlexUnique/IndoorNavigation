@@ -17,6 +17,8 @@
 		E90FF9831BF7821400A42928 /* INCatalogue.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9821BF7821400A42928 /* INCatalogue.m */; };
 		E90FF9861BF7826300A42928 /* INProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9851BF7826300A42928 /* INProduct.m */; };
 		E90FF9891BF79A3B00A42928 /* INCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9881BF79A3B00A42928 /* INCategory.m */; };
+		E90FF9951BF7A37700A42928 /* INCatalogueController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9941BF7A37700A42928 /* INCatalogueController.m */; };
+		E90FF99B1BF7A5E600A42928 /* INBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF99A1BF7A5E600A42928 /* INBeacon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,12 @@
 		E90FF9851BF7826300A42928 /* INProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INProduct.m; sourceTree = "<group>"; };
 		E90FF9871BF79A3B00A42928 /* INCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCategory.h; sourceTree = "<group>"; };
 		E90FF9881BF79A3B00A42928 /* INCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCategory.m; sourceTree = "<group>"; };
+		E90FF9931BF7A37700A42928 /* INCatalogueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueController.h; sourceTree = "<group>"; };
+		E90FF9941BF7A37700A42928 /* INCatalogueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogueController.m; sourceTree = "<group>"; };
+		E90FF9961BF7A3B900A42928 /* INCatalogueControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueControllerDelegate.h; sourceTree = "<group>"; };
+		E90FF9971BF7A3EC00A42928 /* INCatalogueControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueControllerDataSource.h; sourceTree = "<group>"; };
+		E90FF9991BF7A5E600A42928 /* INBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBeacon.h; sourceTree = "<group>"; };
+		E90FF99A1BF7A5E600A42928 /* INBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBeacon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,8 @@
 		E90FF9771BF77D1B00A42928 /* Catalogue */ = {
 			isa = PBXGroup;
 			children = (
+				E90FF9981BF7A5C000A42928 /* Discovery */,
+				E90FF9921BF7A2A300A42928 /* Controller */,
 				E90FF9801BF780F400A42928 /* Model */,
 				E90FF97F1BF780DC00A42928 /* View */,
 			);
@@ -129,6 +139,26 @@
 				E90FF9851BF7826300A42928 /* INProduct.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E90FF9921BF7A2A300A42928 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E90FF9931BF7A37700A42928 /* INCatalogueController.h */,
+				E90FF9941BF7A37700A42928 /* INCatalogueController.m */,
+				E90FF9961BF7A3B900A42928 /* INCatalogueControllerDelegate.h */,
+				E90FF9971BF7A3EC00A42928 /* INCatalogueControllerDataSource.h */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E90FF9981BF7A5C000A42928 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				E90FF9991BF7A5E600A42928 /* INBeacon.h */,
+				E90FF99A1BF7A5E600A42928 /* INBeacon.m */,
+			);
+			name = Discovery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +234,8 @@
 			files = (
 				E90FF97E1BF7800900A42928 /* INCatalogueTableViewCell.m in Sources */,
 				E90FF9891BF79A3B00A42928 /* INCategory.m in Sources */,
+				E90FF9951BF7A37700A42928 /* INCatalogueController.m in Sources */,
+				E90FF99B1BF7A5E600A42928 /* INBeacon.m in Sources */,
 				E90FF9831BF7821400A42928 /* INCatalogue.m in Sources */,
 				E90FF9861BF7826300A42928 /* INProduct.m in Sources */,
 				E90FF9651BF779CE00A42928 /* AppDelegate.m in Sources */,
