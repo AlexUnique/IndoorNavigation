@@ -21,6 +21,14 @@
 
 @implementation INShoppingListController
 
+- (instancetype)init {
+  if (self = [super init]) {
+    self.items = [NSMutableArray new];
+  }
+  
+  return self;
+}
+
 - (void)addItemWithTitle:(NSString *)title {
     INShoppingListItem *item = [INShoppingListItem new];
     item.title = title;

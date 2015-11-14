@@ -20,24 +20,24 @@
   self.doneButton.hidden = item.done;
   switch (item.status) {
     case INShoppingListItemStatusNotAvailable:
-      self.titleLabel.text = @"Not Available";
-      self.titleLabel.textColor = [UIColor redColor];
+      self.statusLabel.text = @"Not Available";
+      self.statusLabel.textColor = [UIColor redColor];
       break;
       
     case INShoppingListItemStatusAvailable:
-      self.titleLabel.text = @"Available";
-      self.titleLabel.textColor = [UIColor darkTextColor];
+      self.statusLabel.text = @"Available";
+      self.statusLabel.textColor = [UIColor darkTextColor];
       break;
       
     case INShoppingListItemStatusInIsle:
-      self.titleLabel.text = @"In nearest isle";
-      self.titleLabel.textColor = [UIColor yellowColor];
+      self.statusLabel.text = @"In nearest isle";
+      self.statusLabel.textColor = [UIColor blueColor];
       
       break;
       
     case INShoppingListItemStatusNear:
-      self.titleLabel.text = @"Right near you";
-      self.titleLabel.textColor = [UIColor greenColor];
+      self.statusLabel.text = @"Right near you";
+      self.statusLabel.textColor = [UIColor greenColor];
       break;
   }
 }

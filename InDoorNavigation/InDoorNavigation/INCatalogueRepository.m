@@ -21,29 +21,31 @@
 #pragma mark - INShoppingListControllerDataSource
 
 - (INShoppingListItemStatus)statusForItemWithTitle:(NSString *)title nearBeacon:(INBeacon *)beacon {
-    INShoppingListItemStatus status = INShoppingListItemStatusNotAvailable;
-    
-    for (INCatalogue *catalogue in [self.cataloguesIndexedByUUID allValues]) {
-        for (INProduct *product in [catalogue valueForKeyPath:@"category.products"]) {
-            if ([product.title compare:title options:NSCaseInsensitiveSearch] == NSOrderedSame) {
-                if ([catalogue.UUID.UUIDString isEqual:beacon.UUID.UUIDString]) {
-                    return product.highlighted ? MAX(INShoppingListItemStatusNear, status) : MAX(INShoppingListItemStatusInIsle, status);
-                }
-                else {
-                    status = MAX(INShoppingListItemStatusAvailable, status);
-                }
-            }
+  INShoppingListItemStatus status = INShoppingListItemStatusNotAvailable;
+  
+  for (INCatalogue *catalogue in [self.cataloguesIndexedByUUID allValues]) {
+    for (NSArray *products in [catalogue valueForKeyPath:@"categories.items"]) {
+      for (INProduct *product in products) {
+        if ([product.title compare:title options:NSCaseInsensitiveSearch] == NSOrderedSame) {
+          if ([catalogue.UUID.UUIDString isEqual:beacon.UUID.UUIDString]) {
+            return product.highlighted ? MAX(INShoppingListItemStatusNear, status) : MAX(INShoppingListItemStatusInIsle, status);
+          }
+          else {
+            status = MAX(INShoppingListItemStatusAvailable, status);
+          }
         }
+      }
     }
-    
-    return status;
+  }
+  
+  return status;
 }
 
 #pragma mark - INCatalogueControllerDataSource
 
 - (INCatalogue *)catalogueForBeacon:(INBeacon *)beacon
 {
-    return self.cataloguesIndexedByUUID[beacon.UUID];
+  return self.cataloguesIndexedByUUID[beacon.UUID];
 }
 
 #pragma mark - Private
@@ -76,7 +78,7 @@
     catalogue.categories = [self _categoriesWithRawCategories:rawCatalogue[@"categories"]];
     [catalogues addObject:catalogue];
   }
-
+  
   return catalogues;
 }
 

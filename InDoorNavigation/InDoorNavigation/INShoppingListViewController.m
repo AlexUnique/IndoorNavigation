@@ -10,6 +10,7 @@
 #import "INShoppingListTableViewCell.h"
 #import "INBeaconDiscoveryManager.h"
 #import "INShoppingListController.h"
+#import "INCatalogueRepository.h"
 
 @interface INShoppingListViewController ()
 
@@ -18,6 +19,7 @@
 
 @property (nonatomic, copy) NSArray<INShoppingListItem *> *items;
 @property (nonatomic, strong) INShoppingListController *shoppingListController;
+@property (nonatomic, strong) INCatalogueRepository *repository;
 
 - (IBAction)addAction:(id)sender;
 - (IBAction)cancelAction:(id)sender;
@@ -34,6 +36,8 @@
   
   self.shoppingListController = [INShoppingListController new];
   self.shoppingListController.delegate = self;
+  self.repository = [INCatalogueRepository new];
+  self.shoppingListController.dataSource = self.repository;
 }
 
 - (void)cancelAction:(id)sender {
