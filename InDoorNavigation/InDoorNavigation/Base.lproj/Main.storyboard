@@ -65,15 +65,21 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-3.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGE-zQ-bwP" userLabel="Discount">
-                                                    <rect key="frame" x="268" y="29" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGE-zQ-bwP" userLabel="Discount">
+                                                    <rect key="frame" x="310" y="50" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EG4-Cq-NHa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="10" height="60"/>
+                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="E3j-JP-ZO5" firstAttribute="bottom" secondItem="TpH-dn-jM2" secondAttribute="bottom" id="1ya-95-P2B"/>
+                                                <constraint firstItem="EG4-Cq-NHa" firstAttribute="top" secondItem="cBP-Xg-J5O" secondAttribute="top" id="5zR-T9-Ao7"/>
+                                                <constraint firstAttribute="bottom" secondItem="EG4-Cq-NHa" secondAttribute="bottom" id="AQI-we-Toa"/>
                                                 <constraint firstItem="aX4-nN-DCe" firstAttribute="leading" secondItem="TpH-dn-jM2" secondAttribute="trailing" constant="10" id="B0D-kH-kAY"/>
                                                 <constraint firstAttribute="trailing" secondItem="aX4-nN-DCe" secondAttribute="trailing" constant="10" id="Cgb-yF-vjI"/>
                                                 <constraint firstItem="aX4-nN-DCe" firstAttribute="top" secondItem="TpH-dn-jM2" secondAttribute="top" id="R1T-Qv-mLb"/>
@@ -81,6 +87,8 @@
                                                 <constraint firstItem="YGE-zQ-bwP" firstAttribute="baseline" secondItem="E3j-JP-ZO5" secondAttribute="baseline" id="feV-hw-BWI"/>
                                                 <constraint firstAttribute="trailing" secondItem="YGE-zQ-bwP" secondAttribute="trailing" constant="10" id="kNm-Hb-x4Q"/>
                                                 <constraint firstItem="TpH-dn-jM2" firstAttribute="top" secondItem="cBP-Xg-J5O" secondAttribute="top" constant="10" id="lAU-0T-l65"/>
+                                                <constraint firstItem="TpH-dn-jM2" firstAttribute="leading" secondItem="EG4-Cq-NHa" secondAttribute="trailing" id="lhh-9t-w3f"/>
+                                                <constraint firstItem="EG4-Cq-NHa" firstAttribute="leading" secondItem="cBP-Xg-J5O" secondAttribute="leading" id="n3x-hJ-Dci"/>
                                                 <constraint firstAttribute="bottom" secondItem="TpH-dn-jM2" secondAttribute="bottom" constant="10" id="qle-OP-1Ut"/>
                                                 <constraint firstItem="TpH-dn-jM2" firstAttribute="leading" secondItem="cBP-Xg-J5O" secondAttribute="leading" constant="10" id="uvw-b2-tVn"/>
                                             </constraints>

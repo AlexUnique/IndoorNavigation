@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "INCatalogueControllerDelegate.h"
 
 @class INCatalogue;
 
-@interface INCatalogueViewController : UIViewController <UITableViewDataSource>
+@interface INCatalogueViewController : UIViewController <UITableViewDataSource, INCatalogueControllerDelegate>
 
 - (void)setCatalogue:(INCatalogue *)catalogue;
 

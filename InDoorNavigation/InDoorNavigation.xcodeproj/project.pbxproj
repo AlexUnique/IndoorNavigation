@@ -19,6 +19,7 @@
 		E90FF9891BF79A3B00A42928 /* INCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9881BF79A3B00A42928 /* INCategory.m */; };
 		E90FF9951BF7A37700A42928 /* INCatalogueController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9941BF7A37700A42928 /* INCatalogueController.m */; };
 		E90FF99B1BF7A5E600A42928 /* INBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF99A1BF7A5E600A42928 /* INBeacon.m */; };
+		E90FF9A01BF7A81500A42928 /* INCatalogueRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF99F1BF7A81500A42928 /* INCatalogueRepository.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		E90FF9971BF7A3EC00A42928 /* INCatalogueControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueControllerDataSource.h; sourceTree = "<group>"; };
 		E90FF9991BF7A5E600A42928 /* INBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBeacon.h; sourceTree = "<group>"; };
 		E90FF99A1BF7A5E600A42928 /* INBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBeacon.m; sourceTree = "<group>"; };
+		E90FF99E1BF7A81500A42928 /* INCatalogueRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueRepository.h; sourceTree = "<group>"; };
+		E90FF99F1BF7A81500A42928 /* INCatalogueRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogueRepository.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		E90FF9771BF77D1B00A42928 /* Catalogue */ = {
 			isa = PBXGroup;
 			children = (
+				E90FF99D1BF7A7FC00A42928 /* Repository */,
 				E90FF9981BF7A5C000A42928 /* Discovery */,
 				E90FF9921BF7A2A300A42928 /* Controller */,
 				E90FF9801BF780F400A42928 /* Model */,
@@ -159,6 +163,15 @@
 				E90FF99A1BF7A5E600A42928 /* INBeacon.m */,
 			);
 			name = Discovery;
+			sourceTree = "<group>";
+		};
+		E90FF99D1BF7A7FC00A42928 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E90FF99E1BF7A81500A42928 /* INCatalogueRepository.h */,
+				E90FF99F1BF7A81500A42928 /* INCatalogueRepository.m */,
+			);
+			name = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +247,7 @@
 			files = (
 				E90FF97E1BF7800900A42928 /* INCatalogueTableViewCell.m in Sources */,
 				E90FF9891BF79A3B00A42928 /* INCategory.m in Sources */,
+				E90FF9A01BF7A81500A42928 /* INCatalogueRepository.m in Sources */,
 				E90FF9951BF7A37700A42928 /* INCatalogueController.m in Sources */,
 				E90FF99B1BF7A5E600A42928 /* INBeacon.m in Sources */,
 				E90FF9831BF7821400A42928 /* INCatalogue.m in Sources */,

@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSDecimalNumber *price;
 @property (nonatomic, strong) NSDecimalNumber *discount;
+@property (nonatomic, assign) BOOL highlighted;
 
 @end

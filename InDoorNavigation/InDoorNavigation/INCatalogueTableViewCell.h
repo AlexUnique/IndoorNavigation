@@ -16,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *priceLabel;
 @property (nonatomic, strong) IBOutlet UILabel *discountLabel;
+@property (nonatomic, strong) IBOutlet UIView *highlightingIndicator;
 
 - (void)setProduct:(INProduct *)product;
 

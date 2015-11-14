@@ -15,6 +15,7 @@
     self.titleLabel.text = product.title;
     self.priceLabel.text = product.price.stringValue;
     self.discountLabel.text = product.discount.stringValue;
+    self.highlightingIndicator.hidden = !product.highlighted;
 }
 
 @end
