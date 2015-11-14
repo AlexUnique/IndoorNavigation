@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "INShoppingListControllerDelegate.h"
 
-@interface INShoppingListViewController : UIViewController <UITableViewDataSource>
+@interface INShoppingListViewController : UIViewController <UITableViewDataSource, INShoppingListControllerDelegate>
 
 @end
