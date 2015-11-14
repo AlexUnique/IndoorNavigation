@@ -13,6 +13,9 @@
 		FA3EC5141BF780810069691B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3EC5131BF780810069691B /* Assets.xcassets */; };
 		FA3EC5171BF780810069691B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3EC5151BF780810069691B /* LaunchScreen.storyboard */; };
 		FA3EC5201BF7839B0069691B /* INBBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC51F1BF7839B0069691B /* INBBeaconViewController.m */; };
+		FA3EC5231BF7846D0069691B /* INBBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5221BF7846D0069691B /* INBBeacon.m */; };
+		FA3EC5261BF784770069691B /* INBBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5251BF784770069691B /* INBBeaconManager.m */; };
+		FA3EC5291BF79ED50069691B /* INBBeaconDiscoveryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5281BF79ED50069691B /* INBBeaconDiscoveryManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		FA3EC5181BF780810069691B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3EC51E1BF7839B0069691B /* INBBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBBeaconViewController.h; sourceTree = "<group>"; };
 		FA3EC51F1BF7839B0069691B /* INBBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBBeaconViewController.m; sourceTree = "<group>"; };
+		FA3EC5211BF7846D0069691B /* INBBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBBeacon.h; sourceTree = "<group>"; };
+		FA3EC5221BF7846D0069691B /* INBBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBBeacon.m; sourceTree = "<group>"; };
+		FA3EC5241BF784770069691B /* INBBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBBeaconManager.h; sourceTree = "<group>"; };
+		FA3EC5251BF784770069691B /* INBBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBBeaconManager.m; sourceTree = "<group>"; };
+		FA3EC5271BF79ED50069691B /* INBBeaconDiscoveryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBBeaconDiscoveryManager.h; sourceTree = "<group>"; };
+		FA3EC5281BF79ED50069691B /* INBBeaconDiscoveryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBBeaconDiscoveryManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,12 @@
 				FA3EC5081BF780810069691B /* AppDelegate.m */,
 				FA3EC51E1BF7839B0069691B /* INBBeaconViewController.h */,
 				FA3EC51F1BF7839B0069691B /* INBBeaconViewController.m */,
+				FA3EC5211BF7846D0069691B /* INBBeacon.h */,
+				FA3EC5221BF7846D0069691B /* INBBeacon.m */,
+				FA3EC5241BF784770069691B /* INBBeaconManager.h */,
+				FA3EC5251BF784770069691B /* INBBeaconManager.m */,
+				FA3EC5271BF79ED50069691B /* INBBeaconDiscoveryManager.h */,
+				FA3EC5281BF79ED50069691B /* INBBeaconDiscoveryManager.m */,
 				FA3EC5101BF780810069691B /* Main.storyboard */,
 				FA3EC5131BF780810069691B /* Assets.xcassets */,
 				FA3EC5151BF780810069691B /* LaunchScreen.storyboard */,
@@ -150,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3EC5261BF784770069691B /* INBBeaconManager.m in Sources */,
 				FA3EC5201BF7839B0069691B /* INBBeaconViewController.m in Sources */,
+				FA3EC5291BF79ED50069691B /* INBBeaconDiscoveryManager.m in Sources */,
 				FA3EC5091BF780810069691B /* AppDelegate.m in Sources */,
 				FA3EC5061BF780810069691B /* main.m in Sources */,
+				FA3EC5231BF7846D0069691B /* INBBeacon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
