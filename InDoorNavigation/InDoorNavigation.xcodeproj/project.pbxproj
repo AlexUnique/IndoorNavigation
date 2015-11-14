@@ -21,6 +21,9 @@
 		E90FF99B1BF7A5E600A42928 /* INBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF99A1BF7A5E600A42928 /* INBeacon.m */; };
 		E90FF9A01BF7A81500A42928 /* INCatalogueRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF99F1BF7A81500A42928 /* INCatalogueRepository.m */; };
 		E90FF9A21BF7B72900A42928 /* Voodka.png in Resources */ = {isa = PBXBuildFile; fileRef = E90FF9A11BF7B72900A42928 /* Voodka.png */; };
+		E90FF9A81BF7BF2D00A42928 /* INShoppingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9A71BF7BF2D00A42928 /* INShoppingListViewController.m */; };
+		E90FF9AD1BF7C54800A42928 /* INShoppingListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9AC1BF7C54800A42928 /* INShoppingListTableViewCell.m */; };
+		E9A253131BF7CDA200AC3428 /* INShoppingListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A253121BF7CDA200AC3428 /* INShoppingListItem.m */; };
 		FA3EC5341BF7BB450069691B /* INBeaconDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5311BF7BB450069691B /* INBeaconDefaults.m */; };
 		FA3EC5351BF7BB450069691B /* INBeaconDiscoveryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5331BF7BB450069691B /* INBeaconDiscoveryManager.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +56,12 @@
 		E90FF99E1BF7A81500A42928 /* INCatalogueRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueRepository.h; sourceTree = "<group>"; };
 		E90FF99F1BF7A81500A42928 /* INCatalogueRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogueRepository.m; sourceTree = "<group>"; };
 		E90FF9A11BF7B72900A42928 /* Voodka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Voodka.png; sourceTree = "<group>"; };
+		E90FF9A61BF7BF2D00A42928 /* INShoppingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INShoppingListViewController.h; sourceTree = "<group>"; };
+		E90FF9A71BF7BF2D00A42928 /* INShoppingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INShoppingListViewController.m; sourceTree = "<group>"; };
+		E90FF9AB1BF7C54800A42928 /* INShoppingListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INShoppingListTableViewCell.h; sourceTree = "<group>"; };
+		E90FF9AC1BF7C54800A42928 /* INShoppingListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INShoppingListTableViewCell.m; sourceTree = "<group>"; };
+		E9A253111BF7CDA200AC3428 /* INShoppingListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INShoppingListItem.h; sourceTree = "<group>"; };
+		E9A253121BF7CDA200AC3428 /* INShoppingListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INShoppingListItem.m; sourceTree = "<group>"; };
 		FA3EC5301BF7BB450069691B /* INBeaconDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBeaconDefaults.h; sourceTree = "<group>"; };
 		FA3EC5311BF7BB450069691B /* INBeaconDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBeaconDefaults.m; sourceTree = "<group>"; };
 		FA3EC5321BF7BB450069691B /* INBeaconDiscoveryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBeaconDiscoveryManager.h; sourceTree = "<group>"; };
@@ -90,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E90FF9A31BF7B72C00A42928 /* Assets */,
+				E90FF9A51BF7BD4300A42928 /* ShopingList */,
 				E90FF9771BF77D1B00A42928 /* Catalogue */,
 				E90FF9631BF779CE00A42928 /* AppDelegate.h */,
 				E90FF9641BF779CE00A42928 /* AppDelegate.m */,
@@ -195,6 +205,51 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		E90FF9A51BF7BD4300A42928 /* ShopingList */ = {
+			isa = PBXGroup;
+			children = (
+				E9A253141BF7D03F00AC3428 /* Business Logic */,
+				E9A253101BF7CBEF00AC3428 /* Model */,
+				E90FF9AA1BF7C16100A42928 /* View */,
+			);
+			name = ShopingList;
+			sourceTree = "<group>";
+		};
+		E90FF9A91BF7C15A00A42928 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E90FF9AB1BF7C54800A42928 /* INShoppingListTableViewCell.h */,
+				E90FF9AC1BF7C54800A42928 /* INShoppingListTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		E90FF9AA1BF7C16100A42928 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E90FF9A91BF7C15A00A42928 /* Cell */,
+				E90FF9A61BF7BF2D00A42928 /* INShoppingListViewController.h */,
+				E90FF9A71BF7BF2D00A42928 /* INShoppingListViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E9A253101BF7CBEF00AC3428 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9A253111BF7CDA200AC3428 /* INShoppingListItem.h */,
+				E9A253121BF7CDA200AC3428 /* INShoppingListItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E9A253141BF7D03F00AC3428 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Business Logic";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,16 +322,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90FF9AD1BF7C54800A42928 /* INShoppingListTableViewCell.m in Sources */,
 				E90FF97E1BF7800900A42928 /* INCatalogueTableViewCell.m in Sources */,
 				E90FF9891BF79A3B00A42928 /* INCategory.m in Sources */,
 				E90FF9A01BF7A81500A42928 /* INCatalogueRepository.m in Sources */,
 				E90FF9951BF7A37700A42928 /* INCatalogueController.m in Sources */,
 				E90FF99B1BF7A5E600A42928 /* INBeacon.m in Sources */,
+				E90FF9A81BF7BF2D00A42928 /* INShoppingListViewController.m in Sources */,
 				E90FF9831BF7821400A42928 /* INCatalogue.m in Sources */,
 				E90FF9861BF7826300A42928 /* INProduct.m in Sources */,
 				FA3EC5351BF7BB450069691B /* INBeaconDiscoveryManager.m in Sources */,
 				FA3EC5341BF7BB450069691B /* INBeaconDefaults.m in Sources */,
 				E90FF9651BF779CE00A42928 /* AppDelegate.m in Sources */,
+				E9A253131BF7CDA200AC3428 /* INShoppingListItem.m in Sources */,
 				E90FF9621BF779CE00A42928 /* main.m in Sources */,
 				E90FF97A1BF77D3F00A42928 /* INCatalogueViewController.m in Sources */,
 			);
