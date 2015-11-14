@@ -24,6 +24,7 @@
 		E90FF9A81BF7BF2D00A42928 /* INShoppingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9A71BF7BF2D00A42928 /* INShoppingListViewController.m */; };
 		E90FF9AD1BF7C54800A42928 /* INShoppingListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9AC1BF7C54800A42928 /* INShoppingListTableViewCell.m */; };
 		E9A253131BF7CDA200AC3428 /* INShoppingListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A253121BF7CDA200AC3428 /* INShoppingListItem.m */; };
+		E9A2531A1BF7D3FC00AC3428 /* INShoppingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A253191BF7D3FC00AC3428 /* INShoppingListController.m */; };
 		FA3EC5341BF7BB450069691B /* INBeaconDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5311BF7BB450069691B /* INBeaconDefaults.m */; };
 		FA3EC5351BF7BB450069691B /* INBeaconDiscoveryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC5331BF7BB450069691B /* INBeaconDiscoveryManager.m */; };
 		FAFAB6A21BF7CC7A00521195 /* Catalogues.json in Resources */ = {isa = PBXBuildFile; fileRef = FAFAB6A11BF7CC7A00521195 /* Catalogues.json */; };
@@ -63,6 +64,10 @@
 		E90FF9AC1BF7C54800A42928 /* INShoppingListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INShoppingListTableViewCell.m; sourceTree = "<group>"; };
 		E9A253111BF7CDA200AC3428 /* INShoppingListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INShoppingListItem.h; sourceTree = "<group>"; };
 		E9A253121BF7CDA200AC3428 /* INShoppingListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INShoppingListItem.m; sourceTree = "<group>"; };
+		E9A253181BF7D3FC00AC3428 /* INShoppingListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INShoppingListController.h; sourceTree = "<group>"; };
+		E9A253191BF7D3FC00AC3428 /* INShoppingListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INShoppingListController.m; sourceTree = "<group>"; };
+		E9A2531B1BF7D87300AC3428 /* INShoppingListControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INShoppingListControllerDelegate.h; sourceTree = "<group>"; };
+		E9A2531C1BF7DE5000AC3428 /* INShoppingListControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INShoppingListControllerDataSource.h; sourceTree = "<group>"; };
 		FA3EC5301BF7BB450069691B /* INBeaconDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBeaconDefaults.h; sourceTree = "<group>"; };
 		FA3EC5311BF7BB450069691B /* INBeaconDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBeaconDefaults.m; sourceTree = "<group>"; };
 		FA3EC5321BF7BB450069691B /* INBeaconDiscoveryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBeaconDiscoveryManager.h; sourceTree = "<group>"; };
@@ -249,6 +254,10 @@
 		E9A253141BF7D03F00AC3428 /* Business Logic */ = {
 			isa = PBXGroup;
 			children = (
+				E9A253181BF7D3FC00AC3428 /* INShoppingListController.h */,
+				E9A253191BF7D3FC00AC3428 /* INShoppingListController.m */,
+				E9A2531B1BF7D87300AC3428 /* INShoppingListControllerDelegate.h */,
+				E9A2531C1BF7DE5000AC3428 /* INShoppingListControllerDataSource.h */,
 			);
 			name = "Business Logic";
 			sourceTree = "<group>";
@@ -330,6 +339,7 @@
 				E90FF97E1BF7800900A42928 /* INCatalogueTableViewCell.m in Sources */,
 				E90FF9891BF79A3B00A42928 /* INCategory.m in Sources */,
 				E90FF9A01BF7A81500A42928 /* INCatalogueRepository.m in Sources */,
+				E9A2531A1BF7D3FC00AC3428 /* INShoppingListController.m in Sources */,
 				E90FF9951BF7A37700A42928 /* INCatalogueController.m in Sources */,
 				E90FF99B1BF7A5E600A42928 /* INBeacon.m in Sources */,
 				E90FF9A81BF7BF2D00A42928 /* INShoppingListViewController.m in Sources */,

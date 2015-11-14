@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "INCatalogueControllerDataSource.h"
+#import "INShoppingListControllerDataSource.h"
 
-@interface INCatalogueRepository : NSObject <INCatalogueControllerDataSource>
+@interface INCatalogueRepository : NSObject <INCatalogueControllerDataSource, INShoppingListControllerDataSource>
 
 @end

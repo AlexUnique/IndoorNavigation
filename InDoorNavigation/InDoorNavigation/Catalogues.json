@@ -6,9 +6,9 @@
 			{
 				"title": "Sweets",
 				"products": [
-					{"title": "Hersheys", "price": "5.00", "discount": "0.00"},
-					{"title": "Snikers", "price": "6.00", "discount": "0.00"},
-					{"title": "Mars", "price": "7.00", "discount": "0.00"},
+					{"title": "Hersheys", "price": "5.00", "discount": "0.00", "highlighted": true},
+					{"title": "Snikers", "price": "6.00", "discount": "0.00", "highlighted": true},
+					{"title": "Mars", "price": "7.00", "discount": "0.00", "highlighted": true},
 					{"title": "Bounty", "price": "8.00", "discount": "0.00", "highlighted": true},
 				]
 			},
@@ -39,20 +39,60 @@
 		]
 	},
 
+     {
+ "id": "11156DB5-DFFB-48D2-B060-D0F5A71096E0",
+ "title": "Isle 1",
+ "categories": [
+                {
+                "title": "Sweets",
+                "products": [
+                             {"title": "Hersheys", "price": "5.00", "discount": "0.00"},
+                             {"title": "Snikers", "price": "6.00", "discount": "0.00"},
+                             {"title": "Mars", "price": "7.00", "discount": "0.00"},
+                             {"title": "Bounty", "price": "8.00", "discount": "0.00"},
+                             ]
+                },
+                
+                {
+                "title": "Cheese",
+                "products": [
+                             {"title": "Old", "price": "5.00", "discount": "-2.00", "highlighted": true},
+                             {"title": "Mild", "price": "6.00", "discount": "-5.00", "highlighted": true},
+                             {"title": "Mozzarella", "price": "3.00", "discount": "-2.00", "highlighted": true},
+                             {"title": "Medium", "price": "6.00", "discount": "0.00", "highlighted": true},
+                             {"title": "Garlic", "price": "5.00", "discount": "-4.00", "highlighted": true},
+                             {"title": "Part Skim", "price": "9.00", "discount": "-2.00", "highlighted": true},
+                             {"title": "Marble", "price": "1.00", "discount": "0.00", "highlighted": true},
+                             ]
+                },
+                
+                {
+                "title": "Bread",
+                "products": [
+                             {"title": "Garlic", "price": "7.00", "discount": "0.00"},
+                             {"title": "White", "price": "6.00", "discount": "0.00"},
+                             {"title": "Rye", "price": "5.00", "discount": "0.00"},
+                             {"title": "Baguette", "price": "8.00", "discount": "-2.50"},
+                             {"title": "Ciabatta", "price": "6.00", "discount": "-2.00"},
+                             ]
+                }
+                ]
+	},
+ 
 	{
 		"id": "222BCFCE-174E-4BAC-A814-092E77F6B7E5",
 		"title": "Isle 2",
 		"categories": [
 			{
-				"title": "Cheese",
+				"title": "Coffee",
 				"products": [
-					{"title": "Old", "price": "5.00", "discount": "-2.00"},
-					{"title": "Mild", "price": "6.00", "discount": "-5.00"},
-					{"title": "Mozzarella", "price": "3.00", "discount": "-2.00"},
-					{"title": "Medium", "price": "6.00", "discount": "0.00", "highlighted": true},
-					{"title": "Garlic", "price": "5.00", "discount": "-4.00", "highlighted": true},
-					{"title": "Part Skim", "price": "9.00", "discount": "-2.00"},
-					{"title": "Marble", "price": "1.00", "discount": "0.00"},
+					{"title": "MacCoffee", "price": "5.00", "discount": "-2.00", "highlighted": true},
+					{"title": "Jacobs", "price": "6.00", "discount": "-5.00", "highlighted": true},
+					{"title": "Starbugs", "price": "3.00", "discount": "-2.00", "highlighted": true},
+					{"title": "Timmys", "price": "6.00", "discount": "0.00", "highlighted": true},
+					{"title": "Tea", "price": "5.00", "discount": "-4.00", "highlighted": true},
+					{"title": "Mocha", "price": "9.00", "discount": "-2.00"},
+					{"title": "French Vanilla", "price": "1.00", "discount": "0.00"},
 				]
 			}
 		]
@@ -63,13 +103,13 @@
 		"title": "Isle 3",
 		"categories": [
 			{
-				"title": "Bread",
+				"title": "Beer",
 				"products": [
-					{"title": "Garlic", "price": "7.00", "discount": "0.00"},
-					{"title": "White", "price": "6.00", "discount": "0.00"},
-					{"title": "Rye", "price": "5.00", "discount": "0.00", "highlighted": true},
-					{"title": "Baguette", "price": "8.00", "discount": "-2.50"},
-					{"title": "Ciabatta", "price": "6.00", "discount": "-2.00"},
+					{"title": "Guiness", "price": "7.00", "discount": "0.00", "highlighted": true},
+					{"title": "Propeller", "price": "6.00", "discount": "0.00", "highlighted": true},
+					{"title": "Noname", "price": "5.00", "discount": "0.00", "highlighted": true},
+					{"title": "Vodka", "price": "8.00", "discount": "-2.50", "highlighted": true},
+					{"title": "Beermix", "price": "6.00", "discount": "-2.00", "highlighted": true},
 				]
 			}
 		]
