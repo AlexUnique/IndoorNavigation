@@ -15,6 +15,7 @@
     self.titleLabel.text = product.title;
     self.priceLabel.text = product.price.stringValue;
     self.discountLabel.text = product.discount.stringValue;
+    self.discountLabel.hidden = [product.discount isEqual:[NSDecimalNumber notANumber]];
     self.highlightingIndicator.hidden = !product.highlighted;
 }
 

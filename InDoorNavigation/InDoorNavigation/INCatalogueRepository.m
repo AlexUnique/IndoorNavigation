@@ -19,22 +19,22 @@
 
 - (INCatalogue *)catalogue0 {
     INCatalogue *catalogue = [INCatalogue new];
-    NSArray *cats = @[@[@"Sweets", @[@"Hersheys", @"5.00", @"-2.00"],
-                        @[@"Snikers", @"6.00", @"-2.00"],
-                        @[@"Mars", @"7.00", @"-2.00"],
-                        @[@"Bounty", @"8.00", @"-2.00"]],
-                      @[@"Cheese", @[@"Old", @"4.00", @"-2.00"],
-                        @[@"Mild", @"6.00", @"-2.00"],
+    NSArray *cats = @[@[@"Sweets", @[@[@"Hersheys", @"5.00", @""],
+                        @[@"Snikers", @"6.00", @""],
+                        @[@"Mars", @"7.00", @""],
+                        @[@"Bounty", @"8.00", @""]]],
+                      @[@"Cheese", @[@[@"Old", @"4.00", @"-2.00"],
+                        @[@"Mild", @"6.00", @"-5.00"],
                         @[@"Mozzarella", @"3.00", @"-2.00"],
-                        @[@"Medium", @"6.00", @"-2.00"],
-                        @[@"Garlic", @"5.00", @"-2.00"],
+                        @[@"Medium", @"6.00", @""],
+                        @[@"Garlic", @"5.00", @"-4.00"],
                         @[@"Part Skim", @"9.00", @"-2.00"],
-                        @[@"Marble", @"1.00", @""]],
-                      @[@"Bread", @[@"Garlic", @"7.00", @"-2.00"],
-                        @[@"White", @"6.00", @"-2.00"],
-                        @[@"Rye", @"5.00", @"-2.00"],
-                        @[@"Baguette", @"8.00", @"-2.00"],
-                        @[@"Ciabatta", @"6.00", @"-2.00"]]];
+                        @[@"Marble", @"1.00", @""]]],
+                      @[@"Bread", @[@[@"Garlic", @"7.00", @""],
+                        @[@"White", @"6.00", @""],
+                        @[@"Rye", @"5.00", @""],
+                        @[@"Baguette", @"8.00", @"-2.50"],
+                        @[@"Ciabatta", @"6.00", @"-2.00"]]]];
     
     NSMutableArray *catsMade = [NSMutableArray new];
     for (NSArray *arr in cats) {

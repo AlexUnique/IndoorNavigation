@@ -12,11 +12,17 @@
 #import "INCategory.h"
 #import "INCatalogue.h"
 
+#import "INCatalogueController.h"
+#import "INCatalogueRepository.h"
+
 @interface INCatalogueViewController ()
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @property (nonatomic, copy) NSArray<INCategory *> *categories;
+
+@property (nonatomic, strong) INCatalogueController *catalogueController;
+@property (nonatomic, strong) INCatalogueRepository *repository;
 
 - (INCategory *)categoryAtIndex:(NSInteger)index;
 - (INProduct *)productAtIndexPath:(NSIndexPath *)indexPath;
@@ -28,6 +34,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 40.0;
+    
+    self.repository = [INCatalogueRepository new];
+    self.catalogueController = [INCatalogueController new];
+    self.catalogueController.delegate = self;
+    self.catalogueController.dataSource = self.repository;
+    [self.catalogueController discoverBeacon:nil];
 }
 
 - (void)setCatalogue:(INCatalogue *)catalogue {
@@ -47,6 +61,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [[self categoryAtIndex:section].items count];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.categories.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

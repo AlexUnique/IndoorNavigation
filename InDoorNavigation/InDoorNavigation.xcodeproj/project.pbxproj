@@ -20,6 +20,7 @@
 		E90FF9951BF7A37700A42928 /* INCatalogueController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF9941BF7A37700A42928 /* INCatalogueController.m */; };
 		E90FF99B1BF7A5E600A42928 /* INBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF99A1BF7A5E600A42928 /* INBeacon.m */; };
 		E90FF9A01BF7A81500A42928 /* INCatalogueRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E90FF99F1BF7A81500A42928 /* INCatalogueRepository.m */; };
+		E90FF9A21BF7B72900A42928 /* Voodka.png in Resources */ = {isa = PBXBuildFile; fileRef = E90FF9A11BF7B72900A42928 /* Voodka.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		E90FF99A1BF7A5E600A42928 /* INBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBeacon.m; sourceTree = "<group>"; };
 		E90FF99E1BF7A81500A42928 /* INCatalogueRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCatalogueRepository.h; sourceTree = "<group>"; };
 		E90FF99F1BF7A81500A42928 /* INCatalogueRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCatalogueRepository.m; sourceTree = "<group>"; };
+		E90FF9A11BF7B72900A42928 /* Voodka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Voodka.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		E90FF95F1BF779CE00A42928 /* InDoorNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				E90FF9A31BF7B72C00A42928 /* Assets */,
 				E90FF9771BF77D1B00A42928 /* Catalogue */,
 				E90FF9631BF779CE00A42928 /* AppDelegate.h */,
 				E90FF9641BF779CE00A42928 /* AppDelegate.m */,
@@ -174,6 +177,14 @@
 			name = Repository;
 			sourceTree = "<group>";
 		};
+		E90FF9A31BF7B72C00A42928 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E90FF9A11BF7B72900A42928 /* Voodka.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E90FF9701BF779CE00A42928 /* LaunchScreen.storyboard in Resources */,
+				E90FF9A21BF7B72900A42928 /* Voodka.png in Resources */,
 				E90FF96D1BF779CE00A42928 /* Assets.xcassets in Resources */,
 				E90FF96B1BF779CE00A42928 /* Main.storyboard in Resources */,
 			);

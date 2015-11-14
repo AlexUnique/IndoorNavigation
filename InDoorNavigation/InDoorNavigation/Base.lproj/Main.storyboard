@@ -35,8 +35,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UsH-92-UEH">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="UsH-92-UEH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="INCatalogueTableViewCell" rowHeight="61" id="ZzL-c0-d3n" customClass="INCatalogueTableViewCell">
@@ -46,7 +46,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TpH-dn-jM2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Voodka.png" translatesAutoresizingMaskIntoConstraints="NO" id="TpH-dn-jM2">
                                                     <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="0UY-Ms-49j"/>
@@ -95,6 +95,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="discountLabel" destination="YGE-zQ-bwP" id="zSG-na-2z7"/>
+                                            <outlet property="highlightingIndicator" destination="EG4-Cq-NHa" id="STd-nP-4V9"/>
                                             <outlet property="priceLabel" destination="E3j-JP-ZO5" id="h1Z-v5-glo"/>
                                             <outlet property="productImageView" destination="TpH-dn-jM2" id="Bhm-kT-ghh"/>
                                             <outlet property="titleLabel" destination="aX4-nN-DCe" id="BoS-eP-N2H"/>
@@ -109,10 +110,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UsH-92-UEH" firstAttribute="top" secondItem="7TM-mZ-hII" secondAttribute="bottom" id="aMA-zZ-ORn"/>
+                            <constraint firstAttribute="bottom" secondItem="UsH-92-UEH" secondAttribute="bottom" id="CZr-g9-D5A"/>
                             <constraint firstAttribute="trailing" secondItem="UsH-92-UEH" secondAttribute="trailing" id="aeL-lK-n5W"/>
                             <constraint firstItem="UsH-92-UEH" firstAttribute="leading" secondItem="pqH-bn-ZXz" secondAttribute="leading" id="fJt-IN-0Up"/>
-                            <constraint firstItem="nV6-y8-viO" firstAttribute="top" secondItem="UsH-92-UEH" secondAttribute="bottom" id="iIQ-Bs-PBc"/>
+                            <constraint firstItem="UsH-92-UEH" firstAttribute="top" secondItem="pqH-bn-ZXz" secondAttribute="top" id="gNx-dq-Bp4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="tgF-Do-MRX"/>
@@ -145,4 +146,7 @@
             <point key="canvasLocation" x="-695" y="123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Voodka.png" width="308" height="385"/>
+    </resources>
 </document>
