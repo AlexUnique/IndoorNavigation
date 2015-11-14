@@ -12,6 +12,9 @@
 
 @interface INCatalogue : NSObject
 
+@property (nonatomic, copy) NSUUID *UUID;
+@property (nonatomic, copy) NSString *title;
+
 @property (nonatomic, copy) NSArray<INCategory *> *categories;
 
 @end

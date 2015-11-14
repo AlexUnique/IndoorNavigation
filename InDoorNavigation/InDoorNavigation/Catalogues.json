@@ -1,0 +1,77 @@
+[
+	{
+		"id": "11156DB5-DFFB-48D2-B060-D0F5A71096E0",
+		"title": "Isle 1",
+		"categories": [
+			{
+				"title": "Sweets",
+				"products": [
+					{"title": "Hersheys", "price": "5.00", "discount": "0.00"},
+					{"title": "Snikers", "price": "6.00", "discount": "0.00"},
+					{"title": "Mars", "price": "7.00", "discount": "0.00"},
+					{"title": "Bounty", "price": "8.00", "discount": "0.00", "highlighted": true},
+				]
+			},
+			
+			{
+				"title": "Cheese",
+				"products": [
+					{"title": "Old", "price": "5.00", "discount": "-2.00"},
+					{"title": "Mild", "price": "6.00", "discount": "-5.00"},
+					{"title": "Mozzarella", "price": "3.00", "discount": "-2.00"},
+					{"title": "Medium", "price": "6.00", "discount": "0.00"},
+					{"title": "Garlic", "price": "5.00", "discount": "-4.00"},
+					{"title": "Part Skim", "price": "9.00", "discount": "-2.00"},
+					{"title": "Marble", "price": "1.00", "discount": "0.00"},
+				]
+			},
+
+			{
+				"title": "Bread",
+				"products": [
+					{"title": "Garlic", "price": "7.00", "discount": "0.00"},
+					{"title": "White", "price": "6.00", "discount": "0.00"},
+					{"title": "Rye", "price": "5.00", "discount": "0.00"},
+					{"title": "Baguette", "price": "8.00", "discount": "-2.50"},
+					{"title": "Ciabatta", "price": "6.00", "discount": "-2.00"},
+				]
+			}
+		]
+	},
+
+	{
+		"id": "222BCFCE-174E-4BAC-A814-092E77F6B7E5",
+		"title": "Isle 2",
+		"categories": [
+			{
+				"title": "Cheese",
+				"products": [
+					{"title": "Old", "price": "5.00", "discount": "-2.00"},
+					{"title": "Mild", "price": "6.00", "discount": "-5.00"},
+					{"title": "Mozzarella", "price": "3.00", "discount": "-2.00"},
+					{"title": "Medium", "price": "6.00", "discount": "0.00", "highlighted": true},
+					{"title": "Garlic", "price": "5.00", "discount": "-4.00", "highlighted": true},
+					{"title": "Part Skim", "price": "9.00", "discount": "-2.00"},
+					{"title": "Marble", "price": "1.00", "discount": "0.00"},
+				]
+			}
+		]
+	},
+
+	{
+		"id": "33378BDA-B644-4520-8F0C-720EAF059935",
+		"title": "Isle 3",
+		"categories": [
+			{
+				"title": "Bread",
+				"products": [
+					{"title": "Garlic", "price": "7.00", "discount": "0.00"},
+					{"title": "White", "price": "6.00", "discount": "0.00"},
+					{"title": "Rye", "price": "5.00", "discount": "0.00", "highlighted": true},
+					{"title": "Baguette", "price": "8.00", "discount": "-2.50"},
+					{"title": "Ciabatta", "price": "6.00", "discount": "-2.00"},
+				]
+			}
+		]
+	}
+]
